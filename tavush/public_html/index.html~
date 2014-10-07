@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tavush</title>
+        <link rel="stylesheet" href="style.css">
+        <script src = "jquery.js" type = "text/javascript"></script>
+        <script src = "script.js" type = "text/javascript"></script>
+    </head>
+    <body id ="bod">
+    <center>	
+        <div class="glxamas"></div>
+        <div class="bacat">
+            <div class="navigation">
+                <ul class="nav">
+                    <li>
+                        <a href="#">Գլխավոր</a>
+                    </li>
+                    <li>
+                        <a href="#">Քաղաքներ</a>                                     
+                        <ul>
+                            <li><a href="#">ԻՋԵՎԱՆ</a></li>
+                            <li><a href="#">ԴԻԼԻՋԱՆ</a></li>
+                            <li><a href="#">ՆՈՅԵՄԲԵՐՅԱՆ</a></li>
+                            <li><a href="#">ԲԵՐԴ</a></li>
+                        </ul>
+                    <li>
+                        <a href="#">Էքսկուրսիոն</a>
+                    </li>
+                    <li>
+                        <a href="#">մմմմմմմ</a>
+                    </li>
+                    <li style="width: 165px;float: left; height: 32px; background-color: rgba(85, 85, 85, 0.58);
+                        text-decoration: none;  border-bottom: 1px solid #069; border-top: 1px solid #069; border-left: 1px solid #069; color: rgba(85, 85, 85, 0.58); 
+                        border-right: none !important;">.</li>
+
+                    <li id="search">                        
+                        <input type="text" placeholder="Որոնում" id="pntrel"
+                    </li>
+            </div>
+        </div>
+        <div class = "main"> 
+            <script>
+                var slider = {
+                    slides: ['ijevan.jpg', 'ijevanb.jpg', 'ijevanc.jpg'],
+                    frame: 0, // текущий кадр для отбражения - индекс картинки из массива
+                    set: function(image) { // установка нужного фона слайдеру
+                        document.getElementById("scr").style.backgroundImage = "url(" + image + ")";
+                    },
+                    init: function() { // запуск слайдера с картинкой с нулевым индексом
+                        this.set(this.slides[this.frame]);
+                    },
+                    left: function() { // крутим на один кадр влево
+                        this.frame--;
+                        if (this.frame < 0)
+                            this.aquamarineframe = this.slides.length - 1;
+                        this.set(this.slides[this.frame]);
+                    },
+                    right: function() { // крутим на один кадр вправо
+                        this.frame++;
+                        if (this.frame === this.slides.length)
+                            this.frame = 0;
+                        this.set(this.slides[this.frame]);
+                    }
+                };
+                window.onload = function() { // запуск слайдера после загрузки документа
+                    slider.init();
+                    setInterval(function() { // ставим пятисекундный интервал для перелистывания картинок
+                        slider.right();
+                    }, 5000);
+                };
+            </script>
+        </div>
+        <div id="main">
+            <!--<button class="left" onclick="slider.left();"><</button>-->
+            <div id="scr"></div>
+            <!--<button class="right" onclick="slider.right();">></button>-->
+        </div>	
+
+    </center>
+    <!-- <div class="class1"><marquee behavior="alternate">
+         </marquee>
+         <marquee direction="down" height="400"> <span style="color: black"> <h2>Ուշադրություն </h2><h3>Առաջարկությունների,<br> բողոքների <br> համար կարող եք <br>զանգահարել<br> հետևյալ հեռ-ով․ <br>0(263) 4-02-10  </h3></span></marquee>
+     </div>-->
+
+
+    <div id="region">
+
+        <div id = "all">
+            <div id = "map">
+                <img src="marz.jpg">
+            </div>
+            <div id="map1">
+                <img src="marz.jpg">
+            </div>
+
+            <div id="marz"><h1>Տավուշի մարզ</h1>
+                Տարածքը`  270399  հա
+                <br>  
+                Բնակչությունը` 132000 մարդ
+                <br>
+                Քաղաքային բնակավայրեր` 5
+                <br>
+                Գյուղական բնակավայրեր` 57
+                <br>
+                Համայնքներ` 62
+            </div>
+            
+        </div>
+        <div id ="about"><p>ՀՀ Տավուշի մարզը գտնվում է Հայաստանի Հանրապետության տարածքի հյուսիս-արևելյան հատվածում։
+                Այն ընդգրկում է Իջևանի, Դիլիջանի, Նոյեմբերյանի և Բերդի (Շամշադինի) տարածաշրջանները: 
+                Մարզը հարավում սահմանակից է ՀՀ Գեղարքունիքի և Կոտայքի մարզերին, արևմուտքում՝ ՀՀ Լոռու մարզին, հյուսիսում` Վրաստանին և արևելքում՝ Ադրբեջանին։
+
+                Մարզն ունի մոտ 350կմ միջպետական սահման, որից 300կմ-ը Ադրբեջանի Հանրապետության հետ, 50-ը` 
+                Մարզի տարածքը կազմում է 2704ք.կմ., ընդհանուր հողատարածությունը` 270393հա, որից գյուղատնտեսական նշանակության հողերը կազմում են 105931.2հա կամ ընդհանուր տարածքի 39.2%-ը: 
+                Մարզը զբաղեցնում է ՀՀ տարածքի 9.1%-ը, բնակչության խտությունը 1ք.կմ-ի վրա կազմում է 50 մարդ:
+
+                Մարզն ունի 5 քաղաքային (Իջևան, Դիլիջան, Նոյեմբերյան, Բերդ, Այրում) և 57 գյուղական համայնք: Համայնքներից 46-ը ՀՀ կառավարության 17.11.1998թ.-ի թիվ 713 որոշմամբ ճանաչվել են սահմանամերձ:
+
+                Մարզի արդյունաբերության առաջատար ճյուղը մշակող արդյունաբերությունն է։ Առավել գերակշռող են սննդարդյունաբերությունը քարամշակումն ու փայտամշակումը։
+                Մարզում արտադրվում է բենտոփոշի, երեսապատման սալիկներ, գինիներ, պահածոներ և այլն: Մարզում արտադրվող արդյունաբերական արտադրանքից արտաքին շուկա են արտահանվում գինիներ, հանքային ջուր, քարե և փայտե արտադրատեսակներ։
+                Տավուշի մարզում գործում են 81 հանրակրթական դպրոց, 16 երաժշտական և արվեստի դպրոց, 46 նախադպրոցական հաստատություն, պետական 6 և ոչ պետական 1 միջին մասնագիտական հաստատություն, 2 պետական և 2 մասնավոր ԲՈՒՀ:
+            </p></div>
+
+</div>
+   
+
+
+    <!-- <h3><a href="Tourism.html"><img src="interest.png">Tourism Portal</a></h3>
+     <h3><a href="museum.html"><img src="museums.png">Museums&Galleries</a></h3>
+     <h3><a href="parks.html"><img src="parks.png">Parks&Gardens</a></h3>
+     <h3><a href="interest.html"><img src="interest.png">Places of interest</a></h3>-->
+ 
+
+</body>
+</html>
